@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  web:
+    image: httpd:latest
+    container_name: apache_server
+    ports:
+      - "8080:80"  # Mapeia a porta 8080 local para a porta 80 do container
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/ # Mapeia a pasta local `html` para o diretório do Apache
